@@ -1,233 +1,223 @@
 import type { Course } from "@/utils/types";
 
+const catalog = "https://catalog.byu.edu/courses";
+// BYU moves the graduate catalog to a new address each academic year.
+const graduateCatalog = "https://graduatecatalog26byu.catalog.prod.coursedog.com/courses";
+
 export const courses: Course[] = [
   {
-    courseNumber: "ECE 380",
-    title: "Signals and Systems",
-    whenOffered: "Fall, Winter",
-    relationshipToRobotics:
-      "Laplace and Fourier transforms. Fundamental to many robotics algorithms.",
-  },
-  {
-    courseNumber: "ECE 424",
-    title: "Computer Systems",
-    whenOffered: "Winter",
-    relationshipToRobotics:
-      "An understanding of how computers work at a deep level is essential to developing real-world robotic systems.",
-  },
-  {
-    courseNumber: "ECE 425",
-    title: "Real-time Operating Systems",
-    whenOffered: "Fall",
-    relationshipToRobotics:
-      "At the lowest level, robots require a real-time operating system.",
-  },
-  {
-    courseNumber: "ECE 483 / ME 431",
-    title: "Feedback Control",
-    whenOffered: "Fall, Winter",
-    relationshipToRobotics:
-      "Robot motion is enabled by feedback controllers that use actuators to act on sensor data.",
+    courseNumber: "CS 240",
+    title: "Advanced Software Construction",
+    whenOffered: "Fall, Winter, Spring, Summer",
+    summary: "Object-oriented design, implementation, and testing of medium-sized programs, including a server.",
+    url: `${catalog}/09200-000`,
   },
   {
     courseNumber: "ME 330",
-    title: "Mechatronics",
-    whenOffered: "Fall, Winter",
-    relationshipToRobotics:
-      "Design and build a robotic system that accomplishes a task.",
+    title: "Design of Mechatronic Systems",
+    whenOffered: "Fall, Winter, Spring",
+    summary: "Microcontroller-based systems: electronics, circuit board design, embedded programming, and mechanical prototyping.",
+    url: `${catalog}/12539-000`,
   },
   {
     courseNumber: "ME 335",
-    title: "Dynamic Systems Modeling",
+    title: "Dynamic System Modeling and Analysis",
     whenOffered: "Fall, Winter",
-    relationshipToRobotics:
-      "Develop models of mechanical systems.",
+    summary: "Modeling mechanical, electrical, and fluid systems; numerical simulation, transfer functions, and frequency response.",
+    url: `${catalog}/03728-005`,
+  },
+  {
+    courseNumber: "ECE 380",
+    title: "Signals and Systems",
+    whenOffered: "Fall",
+    summary: "Time- and frequency-domain analysis of continuous and discrete systems.",
+    url: `${catalog}/01678-003`,
+  },
+  {
+    courseNumber: "CS 412",
+    title: "Linear Programming and Convex Optimization",
+    summary: "Formulating and solving optimization problems with simplex and interior-point methods, with applications in control and estimation.",
+    url: `${catalog}/11187-001`,
   },
   {
     courseNumber: "ME 415",
     title: "Flight Vehicle Design",
     whenOffered: "Fall",
-    relationshipToRobotics:
-      "Vehicle design for aircraft and rockets.",
+    summary: "Aerodynamics, structures, stability, propulsion, and performance of airplanes and rockets, with a design project.",
+    url: `${catalog}/03736-005`,
+  },
+  {
+    courseNumber: "ECE 433",
+    title: "Introduction to Robotics and Autonomy",
+    whenOffered: "Fall",
+    summary: "Build and debug a real robot while learning coordinate transforms, camera models, path planning, PID control, and ROS.",
+    url: `${catalog}/FATrnlUDmghEv8dmmFI8`,
   },
   {
     courseNumber: "ME 437",
     title: "Kinematics",
-    whenOffered: "Winter",
-    relationshipToRobotics:
-      "Modeling of mechanical systems.",
-  },
-  {
-    courseNumber: "CS 240",
-    title: "Advanced Programming",
-    whenOffered: "Fall, Winter, Spring, Summer",
-    relationshipToRobotics:
-      "This is where you will learn to program.",
-  },
-  {
-    courseNumber: "CS 412",
-    title: "Convex Optimization",
-    relationshipToRobotics:
-      "Optimization techniques are used extensively in robotics.",
+    whenOffered: "Fall",
+    summary: "Motion of linkages, cams, and machine parts, including velocity and acceleration analysis and mechanism synthesis.",
+    url: `${catalog}/03726-007`,
   },
   {
     courseNumber: "CS 450",
     title: "Computer Vision",
     whenOffered: "Winter",
-    relationshipToRobotics:
-      "Introduction to vision with a focus on image processing.",
+    summary: "Feature detection, image classification, object detection, segmentation, and 3D perception.",
+    url: `${catalog}/09201-001`,
   },
   {
     courseNumber: "CS 455",
     title: "Computer Graphics",
-    whenOffered: "Fall",
-    relationshipToRobotics:
-      "The math in this class is closely related to that used in robotics.",
+    whenOffered: "Winter",
+    summary: "Programming and architecture of interactive computer graphics systems.",
+    url: `${catalog}/06774-000`,
   },
   {
     courseNumber: "CS 470",
-    title: "Artificial Intelligence",
-    whenOffered: "Fall",
-    relationshipToRobotics:
-      "Introduction to techniques that are widely used in robotics.",
+    title: "Introduction to Artificial Intelligence",
+    whenOffered: "Fall, Winter, Spring",
+    summary: "Intelligent agents, search, inference, planning, reasoning under uncertainty, learning, and perception.",
+    url: `${catalog}/01526-002`,
   },
   {
-    courseNumber: "CS 472",
-    title: "Machine Learning",
+    courseNumber: "ECE 471",
+    title: "Machine Learning: Foundations and Applications",
+    whenOffered: "Winter",
+    summary: "Mathematical foundations of machine learning applied to engineering problems, including time series and dynamical systems.",
+    url: `${catalog}/Q0vRDhxXbvRJFRsi5ggP`,
+  },
+  {
+    courseNumber: "CS 473",
+    title: "Advanced Machine Learning",
     whenOffered: "Fall, Winter",
-    relationshipToRobotics:
-      "Neural networks are extensively used in robotics.",
+    summary: "Neural networks, decision trees, clustering, Bayesian learning, ensembles, and reinforcement learning applied to real data.",
+    url: `${catalog}/7b8qjZGPTWljWRjhWSRr`,
   },
   {
     courseNumber: "CS 474",
-    title: "Deep Learning",
-    whenOffered: "Fall",
-    relationshipToRobotics:
-      "Deep learning techniques are extensively used in robotics.",
+    title: "Introduction to Deep Learning",
+    whenOffered: "Fall, Winter",
+    summary: "Theory and practice of deep learning, with the supporting linear algebra and stochastic optimization.",
+    url: `${catalog}/13781-000`,
   },
   {
-    courseNumber: "ME 533",
-    title: "Autonomous Systems",
-    whenOffered: "Fall, odd years",
-    relationshipToRobotics:
-      "Probabilistic robotics.",
-  },
-  {
-    courseNumber: "ME 534",
-    title: "Dynamics of Mechanical Systems",
-    whenOffered: "Winter",
-    relationshipToRobotics:
-      "Euler-Lagrange modeling techniques.",
-  },
-  {
-    courseNumber: "ME 537",
-    title: "Robotics - Kinematics, Dynamics, Control",
-    whenOffered: "Fall",
-    relationshipToRobotics:
-      "Robotic manipulators.",
-  },
-  {
-    courseNumber: "ME 570",
-    title: "Software Development",
-    whenOffered: "Fall",
-    relationshipToRobotics:
-      "Take this if you are a graduate student and did not take CS 240.",
-  },
-  {
-    courseNumber: "ME 575",
-    title: "Optimization",
-    whenOffered: "Winter",
-    relationshipToRobotics:
-      "Optimization techniques are used extensively in robotics.",
-  },
-  {
-    courseNumber: "ECE 631",
-    title: "Robotic Vision",
-    whenOffered: "Winter",
-    relationshipToRobotics:
-      "Vision applied to robotic systems.",
-  },
-  {
-    courseNumber: "ECE 670",
-    title: "Stochastic Processes",
-    whenOffered: "Fall",
-    relationshipToRobotics:
-      "Mathematical tools used extensively in robotics.",
-  },
-  {
-    courseNumber: "ECE 671",
-    title: "Math of Signals and Systems",
-    whenOffered: "Fall",
-    relationshipToRobotics:
-      "Mathematical tools used extensively in robotics.",
-  },
-  {
-    courseNumber: "ECE 672",
-    title: "Detection and Estimation",
-    whenOffered: "Winter",
-    relationshipToRobotics:
-      "Estimation techniques, including an introduction to Kalman filtering.",
-  },
-  {
-    courseNumber: "ECE 674 / ME 634",
-    title: "Flight Dynamics and Control",
-    whenOffered: "Winter",
-    relationshipToRobotics:
-      "Build a complete UAV simulation including control, Kalman filtering, and path planning.",
-  },
-  {
-    courseNumber: "ECE 682R",
-    title: "Vision Based Flight of Multirotors",
-    whenOffered: "Spring",
-    relationshipToRobotics:
-      "Both control and vision for multirotors.",
-  },
-  {
-    courseNumber: "ECE 773 / ME 733",
-    title: "Linear Systems Theory",
-    whenOffered: "Winter, odd years",
-    relationshipToRobotics:
-      "Linear control techniques including LQR and LQR/LTR.",
-  },
-  {
-    courseNumber: "ECE 774 / ME 734",
-    title: "Nonlinear Systems Theory",
-    whenOffered: "Winter, even years",
-    relationshipToRobotics:
-      "Nonlinear control techniques.",
+    courseNumber: "ECE 483 / ME 431",
+    title: "Design of Control Systems",
+    whenOffered: "Fall, Winter",
+    summary: "Classical frequency- and time-domain controller design, state-variable control, and simulation.",
+    url: `${catalog}/03740-004`,
   },
   {
     courseNumber: "CS 513",
     title: "Robust Control",
     whenOffered: "Winter",
-    relationshipToRobotics:
-      "Control techniques used to maneuver robots.",
+    summary: "Analysis and design of feedback systems that perform well despite model uncertainty.",
+    url: `${catalog}/11441-002`,
+  },
+  {
+    courseNumber: "ME 534",
+    title: "Dynamics of Mechanical Systems",
+    whenOffered: "Winter",
+    summary: "Lagrangian and Hamiltonian dynamics, generalized coordinates, Euler angles, and rigid-body motion.",
+    url: `${catalog}/03743-003`,
+  },
+  {
+    courseNumber: "ECE 536 / ME 536 / ME 634",
+    title: "Autonomous Aircraft Guidance, Navigation, and Control",
+    whenOffered: "Winter, odd years",
+    summary: "Fixed-wing flight dynamics, stability, and state-space control design for autonomous aircraft.",
+    url: `${catalog}/11428-001`,
+  },
+  {
+    courseNumber: "ME 537",
+    title: "Robotics: Kinematics, Dynamics, and Control",
+    whenOffered: "Fall",
+    summary: "Forward and inverse kinematics, Jacobians, dynamics, and control of serial robot manipulators.",
+    url: `${catalog}/03745-005`,
+  },
+  {
+    courseNumber: "ME 570",
+    title: "Computer-Aided Engineering Software Development",
+    whenOffered: "Fall",
+    summary: "Data structures, software architecture, libraries, and user interfaces for engineering software.",
+    url: `${catalog}/07347-004`,
+  },
+  {
+    courseNumber: "ME 575",
+    title: "Optimization Techniques in Engineering",
+    whenOffered: "Winter",
+    summary: "Gradient-based and gradient-free algorithms for constrained nonlinear design optimization.",
+    url: `${catalog}/06791-000`,
+  },
+  {
+    courseNumber: "ECE 631",
+    title: "Robotic Vision",
+    whenOffered: "Winter",
+    summary: "Recovering 3D geometry and motion from images: camera models, image processing, and multi-view geometry.",
+    url: `${graduateCatalog}/11131-000`,
   },
   {
     courseNumber: "CS 650R",
-    title: "Advanced Computer Vision",
+    title: "Advanced Topics in Computer Vision",
     whenOffered: "Fall, Winter",
+    summary: "Current research topics in computer vision and their applications.",
+    url: `${graduateCatalog}/08789-002`,
   },
   {
-    courseNumber: "CS 651",
-    title: "Computational Inference and Recognition in Visual Domains",
-  },
-  {
-    courseNumber: "CS 671",
+    courseNumber: "CS 670",
     title: "Multi-Agent Systems",
-    relationshipToRobotics:
-      "Theory of multi-robot teams.",
+    summary: "Game theory, repeated games, negotiation, search, and learning for systems of interacting agents.",
+    url: `${graduateCatalog}/10400-000`,
+  },
+  {
+    courseNumber: "ECE 670",
+    title: "Stochastic Processes",
+    whenOffered: "Fall",
+    summary: "Random processes: covariance, spectral density, stationarity, ergodicity, mean-square estimation, and Markov processes.",
+    url: "https://gradstudies.byu.edu/ec-en-670-stochastic-processes",
+  },
+  {
+    courseNumber: "ECE 671",
+    title: "Mathematics of Signals and Systems",
+    whenOffered: "Fall",
+    summary: "Linear spaces, eigenvalue and singular-value decompositions, and linear operators for signal processing and control.",
+    url: `${graduateCatalog}/09766-002`,
+  },
+  {
+    courseNumber: "ECE 672",
+    title: "Detection and Estimation Theory",
+    whenOffered: "Winter",
+    summary: "Bayesian and Neyman-Pearson detection; maximum-likelihood, Bayes, and linear estimation; Kalman filters.",
+    url: `${graduateCatalog}/01742-003`,
   },
   {
     courseNumber: "CS 674",
     title: "Advanced Deep Learning",
     whenOffered: "Winter",
+    summary: "Mathematical foundations of modern deep learning, from optimization and architecture design to generative models and reinforcement learning.",
+    url: `${graduateCatalog}/13923-000`,
   },
   {
     courseNumber: "CS 677",
     title: "Bayesian Methods in Computer Science",
     whenOffered: "Spring",
-    relationshipToRobotics:
-      "Mathematical techniques used extensively in robotics.",
+    summary: "Applying Bayesian methods so computers can represent belief and handle uncertainty.",
+    url: `${graduateCatalog}/10955-000`,
   },
-]
+  {
+    courseNumber: "ECE 773 / ME 733",
+    title: "Linear System Theory",
+    whenOffered: "Winter, odd years",
+    summary: "Time-varying linear systems: controllability, observability, Lyapunov stability, LQR, and Kalman filters.",
+    url: `${graduateCatalog}/09772-002`,
+  },
+  {
+    courseNumber: "ECE 774 / ME 734",
+    title: "Nonlinear System Theory",
+    whenOffered: "Winter, even years",
+    summary: "Lyapunov methods, passivity, input-output stability, and nonlinear feedback design.",
+    url: `${graduateCatalog}/10753-001`,
+  },
+];

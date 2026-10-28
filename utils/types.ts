@@ -28,7 +28,7 @@ export type Course = {
   // Cross-listings are separated by " / ". Department and level are derived from this.
   courseNumber: string;
   title: string;
+  summary: string;
+  url: string;
   whenOffered?: string;
-  relationshipToRobotics?: string;
-  syllabusUrl?: string;
 };

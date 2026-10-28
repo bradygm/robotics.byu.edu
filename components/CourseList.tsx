@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { FiExternalLink } from "react-icons/fi";
+import { FiChevronDown, FiExternalLink } from "react-icons/fi";
 import type { Course } from "@/utils/types";
 
 type Level = "undergraduate" | "graduate";
@@ -100,7 +100,7 @@ export default function CourseList({ courses }: CourseListProps) {
       const matchesSearch = !normalizedQuery ||
         course.title.toLocaleLowerCase().includes(normalizedQuery) ||
         course.courseNumber.toLocaleLowerCase().includes(normalizedQuery) ||
-        Boolean(course.relationshipToRobotics?.toLocaleLowerCase().includes(normalizedQuery));
+        course.summary.toLocaleLowerCase().includes(normalizedQuery);
       const matchesDepartment = departmentFilter === "all" ||
         course.listings.some((listing) => listing.department === departmentFilter);
       const matchesLevel = levelFilter === "all" || course.level === levelFilter;
@@ -229,44 +229,32 @@ export default function CourseList({ courses }: CourseListProps) {
 
               <div className="overflow-hidden border border-slate-200 bg-white shadow-sm">
                 {section.rows.map(({ course, listings }) => (
-                  <article
-                    key={course.courseNumber}
-                    className="flex flex-col gap-3 border-b border-slate-100 px-4 py-4 last:border-b-0 sm:px-5 lg:flex-row lg:items-center lg:gap-6"
-                  >
-                    <div className="shrink-0 lg:w-44">
-                      <span className="inline-block rounded bg-[#e8f3fb] px-3 py-1.5 font-mono text-sm font-bold tracking-wide text-[#0047ba]">
-                        {listings.map((listing) => listing.code).join(" / ")}
-                      </span>
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <h4 className="font-bold text-[#002e5d] sm:text-lg">{course.title}</h4>
-                      {course.relationshipToRobotics && (
-                        <p className="mt-1 text-sm leading-6 text-slate-600">{course.relationshipToRobotics}</p>
-                      )}
-                    </div>
-
-                    {(course.whenOffered || course.syllabusUrl) && (
-                      <div className="flex flex-wrap items-center gap-2 lg:justify-end">
+                  <details key={course.courseNumber} className="group border-b border-slate-100 last:border-b-0">
+                    <summary className="flex cursor-pointer list-none items-center gap-4 px-4 py-3 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#7fbeeb] sm:px-5 [&::-webkit-details-marker]:hidden">
+                      <div className="flex min-w-0 flex-1 flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
+                        <span className="font-mono text-sm font-bold text-[#0047ba] sm:w-44 sm:shrink-0">
+                          {listings.map((listing) => listing.code.replace(" ", " ")).join(" / ")}
+                        </span>
+                        <h4 className="font-bold text-[#002e5d]">{course.title}</h4>
                         {course.whenOffered && (
-                          <span className="rounded-full border border-[#b9e3fb] bg-[#e8f7ff] px-3 py-1 text-xs font-semibold text-[#0064a6]">
-                            {course.whenOffered}
-                          </span>
-                        )}
-                        {course.syllabusUrl && (
-                          <a
-                            href={course.syllabusUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-1.5 rounded border border-[#0047ba] px-3 py-1 text-xs font-bold text-[#0047ba] transition hover:bg-[#e8f3fb] focus:outline-none focus:ring-2 focus:ring-[#7fbeeb]/50"
-                          >
-                            Syllabus
-                            <FiExternalLink aria-hidden="true" />
-                          </a>
+                          <span className="text-xs font-semibold text-slate-500 sm:ml-auto sm:shrink-0">{course.whenOffered}</span>
                         )}
                       </div>
-                    )}
-                  </article>
+                      <FiChevronDown aria-hidden="true" className="shrink-0 text-slate-400 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="px-4 pb-4 text-sm leading-6 text-slate-600 sm:pl-[13.25rem] sm:pr-12">
+                      {course.summary}{" "}
+                      <a
+                        href={course.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 font-bold text-[#0047ba] hover:underline"
+                      >
+                        BYU catalog
+                        <FiExternalLink aria-hidden="true" />
+                      </a>
+                    </p>
+                  </details>
                 ))}
               </div>
             </section>
