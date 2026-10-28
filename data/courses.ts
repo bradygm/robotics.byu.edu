@@ -152,6 +152,13 @@ export const courses: Course[] = [
     url: `${catalog}/06791-000`,
   },
   {
+    courseNumber: "CS 580",
+    title: "Theory of Predictive Modeling",
+    whenOffered: "Fall",
+    summary: "Foundations of machine learning, control, and physical modeling: system identification, causality, uncertainty, and model approximation.",
+    url: `${catalog}/14084-000`,
+  },
+  {
     courseNumber: "ECE 631",
     title: "Robotic Vision",
     whenOffered: "Winter",
