@@ -25,11 +25,10 @@ export type FAQ = {
 };
 
 export type Course = {
+  // Cross-listings are separated by " / ". Department and level are derived from this.
   courseNumber: string;
-  department: "CS" | "ECE" | "ME";
-  level: "undergraduate" | "graduate";
   title: string;
-  whenOffered: string;
-  relationshipToRobotics: string;
+  whenOffered?: string;
+  relationshipToRobotics?: string;
   syllabusUrl?: string;
 };

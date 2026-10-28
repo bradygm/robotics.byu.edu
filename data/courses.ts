@@ -3,8 +3,6 @@ import type { Course } from "@/utils/types";
 export const courses: Course[] = [
   {
     courseNumber: "ECE 380",
-    department: "ECE",
-    level: "undergraduate",
     title: "Signals and Systems",
     whenOffered: "Fall, Winter",
     relationshipToRobotics:
@@ -12,8 +10,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 424",
-    department: "ECE",
-    level: "undergraduate",
     title: "Computer Systems",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -21,8 +17,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 425",
-    department: "ECE",
-    level: "undergraduate",
     title: "Real-time Operating Systems",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -30,8 +24,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 483 / ME 431",
-    department: "ECE",
-    level: "undergraduate",
     title: "Feedback Control",
     whenOffered: "Fall, Winter",
     relationshipToRobotics:
@@ -39,8 +31,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 330",
-    department: "ME",
-    level: "undergraduate",
     title: "Mechatronics",
     whenOffered: "Fall, Winter",
     relationshipToRobotics:
@@ -48,8 +38,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 335",
-    department: "ME",
-    level: "undergraduate",
     title: "Dynamic Systems Modeling",
     whenOffered: "Fall, Winter",
     relationshipToRobotics:
@@ -57,8 +45,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 415",
-    department: "ME",
-    level: "undergraduate",
     title: "Flight Vehicle Design",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -66,8 +52,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 437",
-    department: "ME",
-    level: "undergraduate",
     title: "Kinematics",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -75,8 +59,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "CS 240",
-    department: "CS",
-    level: "undergraduate",
     title: "Advanced Programming",
     whenOffered: "Fall, Winter, Spring, Summer",
     relationshipToRobotics:
@@ -84,17 +66,12 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "CS 412",
-    department: "CS",
-    level: "undergraduate",
     title: "Convex Optimization",
-    whenOffered: "Unknown",
     relationshipToRobotics:
       "Optimization techniques are used extensively in robotics.",
   },
   {
     courseNumber: "CS 450",
-    department: "CS",
-    level: "undergraduate",
     title: "Computer Vision",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -102,8 +79,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "CS 455",
-    department: "CS",
-    level: "undergraduate",
     title: "Computer Graphics",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -111,8 +86,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "CS 470",
-    department: "CS",
-    level: "undergraduate",
     title: "Artificial Intelligence",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -120,8 +93,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "CS 472",
-    department: "CS",
-    level: "undergraduate",
     title: "Machine Learning",
     whenOffered: "Fall, Winter",
     relationshipToRobotics:
@@ -129,8 +100,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "CS 474",
-    department: "CS",
-    level: "undergraduate",
     title: "Deep Learning",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -138,8 +107,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 533",
-    department: "ME",
-    level: "graduate",
     title: "Autonomous Systems",
     whenOffered: "Fall, odd years",
     relationshipToRobotics:
@@ -147,8 +114,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 534",
-    department: "ME",
-    level: "graduate",
     title: "Dynamics of Mechanical Systems",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -156,8 +121,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 537",
-    department: "ME",
-    level: "graduate",
     title: "Robotics - Kinematics, Dynamics, Control",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -165,8 +128,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 570",
-    department: "ME",
-    level: "graduate",
     title: "Software Development",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -174,8 +135,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ME 575",
-    department: "ME",
-    level: "graduate",
     title: "Optimization",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -183,8 +142,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 631",
-    department: "ECE",
-    level: "graduate",
     title: "Robotic Vision",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -192,8 +149,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 670",
-    department: "ECE",
-    level: "graduate",
     title: "Stochastic Processes",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -201,8 +156,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 671",
-    department: "ECE",
-    level: "graduate",
     title: "Math of Signals and Systems",
     whenOffered: "Fall",
     relationshipToRobotics:
@@ -210,8 +163,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 672",
-    department: "ECE",
-    level: "graduate",
     title: "Detection and Estimation",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -219,8 +170,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 674 / ME 634",
-    department: "ECE",
-    level: "graduate",
     title: "Flight Dynamics and Control",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -228,8 +177,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 682R",
-    department: "ECE",
-    level: "graduate",
     title: "Vision Based Flight of Multirotors",
     whenOffered: "Spring",
     relationshipToRobotics:
@@ -237,8 +184,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 773 / ME 733",
-    department: "ECE",
-    level: "graduate",
     title: "Linear Systems Theory",
     whenOffered: "Winter, odd years",
     relationshipToRobotics:
@@ -246,8 +191,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "ECE 774 / ME 734",
-    department: "ECE",
-    level: "graduate",
     title: "Nonlinear Systems Theory",
     whenOffered: "Winter, even years",
     relationshipToRobotics:
@@ -255,8 +198,6 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "CS 513",
-    department: "CS",
-    level: "graduate",
     title: "Robust Control",
     whenOffered: "Winter",
     relationshipToRobotics:
@@ -264,41 +205,26 @@ export const courses: Course[] = [
   },
   {
     courseNumber: "CS 650R",
-    department: "CS",
-    level: "graduate",
     title: "Advanced Computer Vision",
     whenOffered: "Fall, Winter",
-    relationshipToRobotics: "Unknown",
   },
   {
     courseNumber: "CS 651",
-    department: "CS",
-    level: "graduate",
     title: "Computational Inference and Recognition in Visual Domains",
-    whenOffered: "Unknown",
-    relationshipToRobotics: "Unknown",
   },
   {
     courseNumber: "CS 671",
-    department: "CS",
-    level: "graduate",
     title: "Multi-Agent Systems",
-    whenOffered: "Unknown",
     relationshipToRobotics:
       "Theory of multi-robot teams.",
   },
   {
     courseNumber: "CS 674",
-    department: "CS",
-    level: "graduate",
     title: "Advanced Deep Learning",
     whenOffered: "Winter",
-    relationshipToRobotics: "Unknown",
   },
   {
     courseNumber: "CS 677",
-    department: "CS",
-    level: "graduate",
     title: "Bayesian Methods in Computer Science",
     whenOffered: "Spring",
     relationshipToRobotics:
